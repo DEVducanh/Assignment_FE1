@@ -1,0 +1,24 @@
+.header-logo svg {
+  width: 140px;
+}
+
+.group-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+  box-shadow: rgb(0, 0, 0, 0.15) 1px 1px 10px 0;
+}
+
+.group-header .group-navigator {
+  display: flex;
+  column-gap: 2rem;
+  background: linear-gradient(to right, #d434b0, #8029fc);
+  background-clip: text;
+  color: transparent;
+  font-size: 1rem;
+}
+
+.group-header .group-navigator div {
+    cursor: pointer;
+}
