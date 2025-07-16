@@ -1,1 +1,31 @@
-<p>categories-list works!</p>
+<div class="table-wrapper">
+  <table class="product-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Category Name</th>
+        <th>Image</th>
+        <th>Mô tả</th>
+        <th>Tình trạng</th>
+        <th>Thao tác</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let categorie of Categories">
+        <td>{{categorie.id}}</td>
+        <td>{{categorie.name}}</td>
+        <td>
+          <img src={{categorie.image}} width="60" height="60" />
+        </td>
+        <td>{{categorie.description}}</td>
+        <td>{{categorie.status}}</td>
+        <td>
+          <button nz-button class="edit-btn">Sửa</button>
+          <button nz-button nzDanger (click)="handleDelete(categorie.id)">Xóa</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
