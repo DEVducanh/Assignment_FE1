@@ -14,7 +14,7 @@
     <tbody>
       <tr *ngFor="let product of Product">
         <td>
-          <img src="https://via.placeholder.com/60" width="60" height="60" />
+          <img src={{product.image}} width="60" height="60" />
         </td>
         <td>{{product.id}}</td>
         <td>{{product.name}}</td>
@@ -23,7 +23,7 @@
         <td>{{product.description}}</td>
         <td>
           <button nz-button class="edit-btn">Sửa</button>
-          <button nz-button nzDanger>Xóa</button>
+          <button nz-button nzDanger (click)="handleDelete(product.id)">Xóa</button>
         </td>
       </tr>
     </tbody>

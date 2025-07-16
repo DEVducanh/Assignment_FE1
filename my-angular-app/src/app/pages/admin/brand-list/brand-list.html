@@ -1,0 +1,31 @@
+<div class="table-wrapper">
+  <table class="product-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Brand Name</th>
+        <th>Xuất xứ</th>
+        <th>Logo</th>
+        <th>Thành lập</th>
+        <th>Thao tác</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let brand of Brands">
+        <td>{{brand.id}}</td>
+        <td>{{brand.name}}</td>
+        <td>{{brand.country}}</td>
+        <td>
+          <img src={{brand.logo}} width="60" height="60" />
+        </td>
+        <td>{{brand.founded}}</td>
+        <td>
+          <button nz-button class="edit-btn">Sửa</button>
+          <button nz-button nzDanger (click)="handleDelete(brand.id)">Xóa</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+

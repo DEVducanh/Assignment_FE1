@@ -38,4 +38,9 @@ export class ProductList {
       image: 'https://example.com/images/dep-bitis.jpg',
     },
   ];
+
+  handleDelete = (id: number) => {
+    const isMatch = window.confirm("Bạn có chắc muốn xóa");
+    if(isMatch) alert("success")
+  }
 }

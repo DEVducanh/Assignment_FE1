@@ -1,0 +1,26 @@
+<div class="table-wrapper">
+  <table class="product-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Password</th>
+        <th>Age</th>
+        <th>Thao tác</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of Users">
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.password}}</td>
+        <td>{{user.age}}</td>
+        <td>
+          <button nz-button class="edit-btn">Sửa</button>
+          <button nz-button nzDanger (click)="handleDelete(user.id)">Xóa</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

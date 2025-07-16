@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
     selector: 'Header-layout',
+    imports: [RouterLink],
     templateUrl: './header-layout.component.html',
     styleUrl: './header-layout.component.css'
 })

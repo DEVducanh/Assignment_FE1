@@ -19,11 +19,10 @@
   </div>
 
   <nav class="header-nav">
-    <a routerLink="/dashboard">Thống kê</a>
-    <a routerLink="/products">Sản phẩm</a>
-    <a routerLink="/cart">Giỏ hàng</a>
-    <a routerLink="/customers">Khách hàng</a>
-    <a routerLink="/contact">Liên hệ</a>
+    <a [routerLink]="['/admin/products']">Sản phẩm</a>
+    <a [routerLink]="['/admin/categories']">Danh mục</a>
+    <a [routerLink]="['/admin/users']">Khách hàng</a>
+    <a [routerLink]="['/admin/brands']">Thương hiệu</a>
   </nav>
 
   <div class="header-right">
