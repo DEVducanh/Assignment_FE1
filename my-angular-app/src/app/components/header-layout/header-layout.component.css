@@ -1,24 +1,94 @@
-.header-logo svg {
-  width: 140px;
-}
-
-.group-header {
+.shoe-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 1rem 1rem;
-  box-shadow: rgb(0, 0, 0, 0.15) 1px 1px 10px 0;
+  justify-content: space-between;
+  padding: 14px 40px;
+  background: #fefefe;
+  color: #1e1e1e;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.group-header .group-navigator {
+.logo {
   display: flex;
-  column-gap: 2rem;
-  background: linear-gradient(to right, #d434b0, #8029fc);
-  background-clip: text;
-  color: transparent;
-  font-size: 1rem;
+  align-items: center;
+  gap: 12px;
 }
 
-.group-header .group-navigator div {
-    cursor: pointer;
+.logo-icon {
+  height: 38px;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ff4d4f;
+}
+
+.header-nav {
+  display: flex;
+  gap: 28px;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s;
+}
+
+.header-nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: #ff4d4f;
+  transition: width 0.3s;
+}
+
+.header-nav a:hover {
+  color: #ff4d4f;
+}
+
+.header-nav a:hover::after {
+  width: 100%;
+}
+
+.header-right {
+  display: flex;
+  gap: 14px;
+}
+
+.btn {
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  background-color: #ff4d4f;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background-color: #e8363a;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid #ff4d4f;
+  color: #ff4d4f;
+}
+
+.btn-outline:hover {
+  background-color: #ff4d4f;
+  color: white;
 }

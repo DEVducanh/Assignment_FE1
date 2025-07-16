@@ -1,0 +1,58 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "product_name": "Giày Thể Thao Nike Air Max",
+      "price": 2500000,
+      "description": "Giày chạy bộ nhẹ, êm chân, thiết kế thời trang.",
+      "category": "Giày thể thao",
+      "stock": 20,
+      "image": "https://example.com/images/nike-air-max.jpg"
+    },
+    {
+      "id": 2,
+      "product_name": "Giày Sneaker Adidas Ultraboost",
+      "price": 3000000,
+      "description": "Công nghệ đệm Boost cao cấp, phù hợp cả đi học lẫn đi chơi.",
+      "category": "Giày thể thao",
+      "stock": 15,
+      "image": "https://example.com/images/adidas-ultraboost.jpg"
+    },
+    {
+      "id": 3,
+      "product_name": "Dép Quai Ngang Nam Biti's",
+      "price": 180000,
+      "description": "Dép cao su bền, êm chân, dùng trong nhà hoặc ngoài trời.",
+      "category": "Dép nam",
+      "stock": 50,
+      "image": "https://example.com/images/dep-bitis.jpg"
+    },
+    {
+      "id": 4,
+      "product_name": "Giày Cao Gót Nữ 7cm",
+      "price": 450000,
+      "description": "Giày cao gót thời trang, phù hợp đi làm, dạo phố hoặc tiệc tùng.",
+      "category": "Giày nữ",
+      "stock": 10,
+      "image": "https://example.com/images/giay-cao-got.jpg"
+    },
+    {
+      "id": 5,
+      "product_name": "Sandal Nữ Quai Chéo",
+      "price": 320000,
+      "description": "Phong cách Hàn Quốc, thoáng mát cho mùa hè.",
+      "category": "Dép nữ",
+      "stock": 25,
+      "image": "https://example.com/images/sandal-nu.jpg"
+    },
+    {
+      "id": 6,
+      "product_name": "Giày Tây Nam Da Bò",
+      "price": 850000,
+      "description": "Chất liệu da bò thật, phong cách lịch lãm cho công sở.",
+      "category": "Giày tây nam",
+      "stock": 8,
+      "image": "https://example.com/images/giay-tay-nam.jpg"
+    }
+  ]
+}
