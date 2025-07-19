@@ -5,22 +5,24 @@
         <th>ID</th>
         <th>Tên sản phẩm</th>
         <th>Giá</th>
+        <th>Image</th>
         <th>Danh mục</th>
-        <th>Số lượng</th>
         <th>Mô tả</th>
+        <th>Số lượng</th>
         <th>Thao tác</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let product of Product">
-        <td>
-          <img src={{product.image}} width="60" height="60" />
-        </td>
         <td>{{product.id}}</td>
         <td>{{product.name}}</td>
         <td>{{product.price}}</td>
-        <td>{{product.stock}}</td>
+        <td>
+          <img src={{product.image}} width="60" height="60" />
+        </td>
+        <td>{{product.category}}</td>
         <td>{{product.description}}</td>
+        <td>{{product.stock}}</td>
         <td>
           <button nz-button class="edit-btn">Sửa</button>
           <button nz-button nzDanger (click)="handleDelete(product.id)">Xóa</button>
