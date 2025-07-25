@@ -5,24 +5,32 @@ import { Client } from './layouts/client/client';
 import { UserList } from './pages/admin/user-list/user-list';
 import { CategoriesList } from './pages/admin/categories-list/categories-list';
 import { BrandList } from './pages/admin/brand-list/brand-list';
+import { ProductDetail } from './pages/client/product-detail/product-detail';
+import { Dashboard } from './pages/client/dashboard/dashboard';
+import { ProductCreate } from './pages/admin/product-create/product-create';
 
 export const routes: Routes = [
-    {
+  {
     path: 'admin',
     component: Admin,
     children: [
+      { path: '', redirectTo: 'products', pathMatch: 'full' },
       { path: 'products', component: ProductList },
+      { path: 'products/create', component: ProductCreate },
       { path: 'categories', component: CategoriesList },
       { path: 'users', component: UserList },
       { path: 'brands', component: BrandList },
       // thêm routes khác như orders, categories tại đây
-    ]
+    ],
   },
   {
     path: 'client',
     component: Client,
     children: [
+      {path: '', redirectTo: 'home', pathMatch:'full'},
+      { path: 'home', component: Dashboard },
+      { path: 'products/:id', component: ProductDetail },
       // thêm routes khác như orders, categories tại đây
-    ]
-  }
+    ],
+  },
 ];
