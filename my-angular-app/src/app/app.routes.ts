@@ -6,8 +6,8 @@ import { UserList } from './pages/admin/user-list/user-list';
 import { CategoriesList } from './pages/admin/categories-list/categories-list';
 import { BrandList } from './pages/admin/brand-list/brand-list';
 import { ProductDetail } from './pages/client/product-detail/product-detail';
-import { Dashboard } from './pages/client/dashboard/dashboard';
 import { ProductCreate } from './pages/admin/product-create/product-create';
+import { Home } from './pages/client/home/home';
 
 export const routes: Routes = [
   {
@@ -28,7 +28,7 @@ export const routes: Routes = [
     component: Client,
     children: [
       {path: '', redirectTo: 'home', pathMatch:'full'},
-      { path: 'home', component: Dashboard },
+      { path: 'home', component: Home },
       { path: 'products/:id', component: ProductDetail },
       // thêm routes khác như orders, categories tại đây
     ],
