@@ -1,5 +1,5 @@
 <div class="table-wrapper">
-  <a routerLink="/admin/products/create">Tạo mới</a>
+  <a [routerLink]="['/admin/products/create']">Tạo mới</a>
   <table class="product-table">
     <thead>
       <tr>
@@ -26,7 +26,7 @@
         <td>{{ product.stock }}</td>
         <td>
           <a
-            [routerLink]="[`/product/detail`, product.id]"
+            [routerLink]="[`/admin/products/update`, product.id]"
             nz-button
             class="edit-btn"
             >Sửa</a

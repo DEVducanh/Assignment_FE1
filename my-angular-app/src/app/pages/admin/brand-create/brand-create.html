@@ -1,0 +1,43 @@
+<form [formGroup]="brandForm" (ngSubmit)="handleSubmit()">
+  <div>
+    <label for="name">Name</label>
+    <input
+      id="name"
+      type="text"
+      formControlName="brandName"
+      placeholder="Nhập tên thương hiệu"
+    />
+  </div>
+
+  <div>
+    <label for="logo">Logo URL</label>
+    <input
+      id="logo"
+      type="text"
+      formControlName="logo"
+      placeholder="Nhập link logo"
+    />
+  </div>
+
+  <div>
+    <label for="country">Country</label>
+    <input
+      id="country"
+      type="text"
+      formControlName="country"
+      placeholder="Nhập quốc gia"
+    />
+  </div>
+
+  <div>
+    <label for="founded">Founded (year)</label>
+    <input
+      id="founded"
+      type="number"
+      formControlName="founded"
+      placeholder="Nhập năm thành lập"
+    />
+  </div>
+
+  <button type="submit">Thêm brand</button>
+</form>

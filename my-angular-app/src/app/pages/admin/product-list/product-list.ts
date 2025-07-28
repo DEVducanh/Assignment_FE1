@@ -17,7 +17,7 @@ export class ProductList {
       description: 'Giày chạy bộ nhẹ, êm chân, thiết kế thời trang.',
       category: 'Giày thể thao',
       stock: 20,
-      image: 'https://example.com/images/nike-air-max.jpg',
+      image: 'https://ash.vn/cdn/shop/files/e4a8315663cf4e71f977a5d3bb7a8dea_1800x.jpg?v=1730711468',
     },
     {
       id: 2,
@@ -27,7 +27,7 @@ export class ProductList {
         'Công nghệ đệm Boost cao cấp, phù hợp cả đi học lẫn đi chơi.',
       category: 'Giày thể thao',
       stock: 15,
-      image: 'https://example.com/images/adidas-ultraboost.jpg',
+      image: 'https://assets.adidas.com/images/w_600,f_auto,q_auto/a3996cc46d9c44ad92ec9ded7271c100_9366/Giay_Ultraboost_1.0_trang_JH9212_HM1.jpg',
     },
     {
       id: 3,
@@ -36,7 +36,7 @@ export class ProductList {
       description: 'Dép cao su bền, êm chân, dùng trong nhà hoặc ngoài trời.',
       category: 'Dép nam',
       stock: 50,
-      image: 'https://example.com/images/dep-bitis.jpg',
+      image: 'https://down-vn.img.susercontent.com/file/vn-11134211-7ras8-m4img97o19lbbd',
     },
   ];
 

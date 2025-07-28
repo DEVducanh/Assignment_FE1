@@ -1,4 +1,6 @@
 <div class="table-wrapper">
+  <a [routerLink]="['/admin/categories/create']">Tạo mới</a>
+
   <table class="product-table">
     <thead>
       <tr>
@@ -12,20 +14,20 @@
     </thead>
     <tbody>
       <tr *ngFor="let categorie of Categories">
-        <td>{{categorie.id}}</td>
-        <td>{{categorie.name}}</td>
+        <td>{{ categorie.id }}</td>
+        <td>{{ categorie.name }}</td>
         <td>
-          <img src={{categorie.image}} width="60" height="60" />
+          <img src="{{ categorie.image }}" width="60" height="60" />
         </td>
-        <td>{{categorie.description}}</td>
-        <td>{{categorie.status}}</td>
+        <td>{{ categorie.description }}</td>
+        <td>{{ categorie.status }}</td>
         <td>
           <button nz-button class="edit-btn">Sửa</button>
-          <button nz-button nzDanger (click)="handleDelete(categorie.id)">Xóa</button>
+          <button nz-button nzDanger (click)="handleDelete(categorie.id)">
+            Xóa
+          </button>
         </td>
       </tr>
     </tbody>
   </table>
 </div>
-
-

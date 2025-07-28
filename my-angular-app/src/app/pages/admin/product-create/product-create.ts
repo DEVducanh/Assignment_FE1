@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
-  selector: 'app-product-add',
+  selector: 'app-product-create',
   imports: [FormsModule,CommonModule],
   templateUrl: './product-create.html',
   styleUrl: './product-create.css',

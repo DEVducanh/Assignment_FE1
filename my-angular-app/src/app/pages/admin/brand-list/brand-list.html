@@ -1,4 +1,5 @@
 <div class="table-wrapper">
+  <a [routerLink]="['/admin/brands/create']">Tạo mới</a>
   <table class="product-table">
     <thead>
       <tr>
@@ -12,20 +13,20 @@
     </thead>
     <tbody>
       <tr *ngFor="let brand of Brands">
-        <td>{{brand.id}}</td>
-        <td>{{brand.name}}</td>
-        <td>{{brand.country}}</td>
+        <td>{{ brand.id }}</td>
+        <td>{{ brand.name }}</td>
+        <td>{{ brand.country }}</td>
         <td>
-          <img src={{brand.logo}} width="60" height="60" />
+          <img src="{{ brand.logo }}" width="60" height="60" />
         </td>
-        <td>{{brand.founded}}</td>
+        <td>{{ brand.founded }}</td>
         <td>
           <button nz-button class="edit-btn">Sửa</button>
-          <button nz-button nzDanger (click)="handleDelete(brand.id)">Xóa</button>
+          <button nz-button nzDanger (click)="handleDelete(brand.id)">
+            Xóa
+          </button>
         </td>
       </tr>
     </tbody>
   </table>
 </div>
-
-

@@ -8,14 +8,120 @@
       name="product_name"
       required
       [(ngModel)]="product.product_name"
-      [ngClass]="{ 'is-invalid': product_name.invalid && product_name.touched}"
+      [ngClass]="{ 'is-invalid': product_name.invalid && product_name.touched }"
       #product_name="ngModel"
     />
-     <div *ngIf="product_name.invalid && product_name.touched" class="invalid-feedback">
-      <div *ngIf="product_name.errors?.['required']">product_name is required.</div>
+    <div
+      *ngIf="product_name.invalid && product_name.touched"
+      class="invalid-feedback"
+    >
+      <div *ngIf="product_name.errors?.['required']">
+        product_name is required.
+      </div>
     </div>
   </div>
-  <button type="submit" class="btn btn-primary" [disabled]="productForm.invalid">
+  <div class="mb-3">
+    <label for="price" class="form-label">Price</label>
+    <input
+      type="number"
+      class="form-control"
+      id="price"
+      name="price"
+      required
+      [(ngModel)]="product.price"
+      [ngClass]="{ 'is-invalid': price.invalid && price.touched }"
+      #price="ngModel"
+    />
+    <div *ngIf="price.invalid && price.touched" class="invalid-feedback">
+      <div *ngIf="price.errors?.['required']">price is required.</div>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="description" class="form-label">Description</label>
+    <input
+      type="text"
+      class="form-control"
+      id="description"
+      name="description"
+      required
+      [(ngModel)]="product.description"
+      [ngClass]="{ 'is-invalid': description.invalid && description.touched }"
+      #description="ngModel"
+    />
+    <div
+      *ngIf="description.invalid && description.touched"
+      class="invalid-feedback"
+    >
+      <div *ngIf="description.errors?.['required']">
+        description is required.
+      </div>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="image" class="form-label">Image Link</label>
+    <input
+      type="url"
+      class="form-control"
+      id="image"
+      name="image"
+      required
+      [(ngModel)]="product.image"
+      [ngClass]="{ 'is-invalid': image.invalid && image.touched }"
+      #image="ngModel"
+    />
+    <div *ngIf="image.invalid && image.touched" class="invalid-feedback">
+      <div *ngIf="image.errors?.['required']">image is required.</div>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="category" class="form-label">Danh mục</label>
+    <select
+      id="category"
+      name="category"
+      class="form-select"
+      required
+      [(ngModel)]="product.category"
+      #category="ngModel"
+      [ngClass]="{ 'is-invalid': category.invalid && category.touched }"
+    >
+      <option value="" disabled selected>-- Chọn danh mục --</option>
+      <option value="Dép">Dép</option>
+      <option value="Giày thể thao">Giày thể thao</option>
+      <option value="Giày tây">Giày tây</option>
+    </select>
+    <div *ngIf="category.invalid && category.touched" class="invalid-feedback">
+      Vui lòng chọn danh mục.
+    </div>
+  </div>
+  <div class="mb-3">
+    <label class="form-label d-block">Tình trạng</label>
+
+    <div class="radio-group">
+      <label>
+        <input
+          type="radio"
+          name="stock"
+          [value]="true"
+          [(ngModel)]="product.stock"
+        />
+        Còn hàng
+      </label>
+
+      <label>
+        <input
+          type="radio"
+          name="stock"
+          [value]="false"
+          [(ngModel)]="product.stock"
+        />
+        Hết hàng
+      </label>
+    </div>
+  </div>
+  <button
+    type="submit"
+    class="btn btn-primary"
+  >
     Submit
   </button>
 </form>

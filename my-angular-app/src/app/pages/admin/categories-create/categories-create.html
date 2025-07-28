@@ -1,0 +1,35 @@
+<form >
+  <div>
+    <label for="id">ID</label>
+    <input id="id" type="number" formControlName="id" placeholder="Nhập ID" />
+  </div>
+
+  <div>
+    <label for="name">Tên danh mục</label>
+    <input id="name" type="text" formControlName="name" placeholder="Nhập tên danh mục" />
+  </div>
+
+  <div>
+    <label for="image">Link hình ảnh</label>
+    <input id="image" type="text" formControlName="image" placeholder="Nhập URL ảnh" />
+  </div>
+
+  <div>
+    <label for="description">Mô tả</label>
+    <textarea id="description" formControlName="description" placeholder="Nhập mô tả"></textarea>
+  </div>
+
+  <div>
+    <label>Trạng thái</label><br />
+    <label>
+      <input name="status" type="radio" [value]="true" formControlName="status" />
+      Hiển thị
+    </label>
+    <label>
+      <input name="status" type="radio" [value]="false" formControlName="status" />
+      Ẩn
+    </label>
+  </div>
+
+  <button type="submit">Thêm danh mục</button>
+</form>
