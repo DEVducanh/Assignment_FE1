@@ -1,28 +1,28 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-product-create',
-  imports: [FormsModule,CommonModule],
+  imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './product-create.html',
   styleUrl: './product-create.css',
 })
 export class ProductCreate {
-  product = {
-    id: '',
-    product_name: '',
-    price: 0,
-    description: '',
-    category: '',
-    stock: true,
-    image: '',
-  };
+  productForm: FormGroup;
 
-  handleAdd(productForm: NgForm){
-    console.log('productForm',productForm.value);
-    if(!productForm.invalid){
-
-    }
+  constructor(private fb: FormBuilder) {
+    this.productForm = this.fb.group({
+      productName: '',
+      price: 0,
+      description: '',
+      imageUrl: '',
+      category: '',
+      stock: true,
+    });
   }
+
+  handleAdd = () => {
+    console.log(this.productForm);
+  };
 }
